@@ -8,7 +8,7 @@ public class InvestmentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private long id;
-    private int riskScore;
+    private RiskLevel riskLevel;
     private double expectedReturn;
     private InvestmentType investmentType;
     

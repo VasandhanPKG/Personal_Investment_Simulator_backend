@@ -11,7 +11,7 @@ public class UserEntity {
     private int age;
     private String name;
     private String email;
-    private int behaviorScore;
+    private Behaviour behaviorScore;
     private double  principleAmount;
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<RecomendationEntity> recomendations;

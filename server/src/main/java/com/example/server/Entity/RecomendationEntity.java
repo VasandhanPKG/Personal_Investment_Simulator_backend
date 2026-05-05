@@ -13,7 +13,7 @@ public class RecomendationEntity {
     private UserEntity user;
     @OneToOne   
     private InvestmentEntity investment;
-    private double recommendedAmount;
-    private String suggestedAction; 
+  
+    private SuggestedAction suggestedAction;
 
 }
