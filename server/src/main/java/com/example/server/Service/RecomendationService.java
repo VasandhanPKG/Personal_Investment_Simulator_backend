@@ -13,6 +13,18 @@ public class RecomendationService {
     private RecomendationRepository recomendationRepository;
 
     public RecomendationEntity addRecomendation(RecomendationEntity recomendation) {
+        
+
+        if(recomendation.getUser().getBehaviorScore() < 5) {
+            recomendation.setSuggestedAction("Sell");
+
+        } 
+        else if(recomendation.getUser().getBehaviorScore() >= 5 && recomendation.getInvestment().getRiskScore() > 7) {
+            recomendation.setSuggestedAction("Hold");
+        }
+        else {    
+        recomendation.setSuggestedAction("Buy");
+        }
         return recomendationRepository.save(recomendation);
     }   
 
